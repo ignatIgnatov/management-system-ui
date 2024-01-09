@@ -79,12 +79,11 @@ const Navbar = () => {
   );
 
   let isAdmin = false;
-  //TODO:
-  // if (user.token) {
-  //   if (user.authorities[0].authority === "ADMIN") {
-  //     isAdmin = true;
-  //   }
-  // }
+  if (user.token) {
+    if (user.authorities[0].role === "ADMIN") {
+      isAdmin = true;
+    }
+  }
 
   return (
     <div>
